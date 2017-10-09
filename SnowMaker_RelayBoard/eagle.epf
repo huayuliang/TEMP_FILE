@@ -6,24 +6,6 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="D:/WorkProject/SY_LBR/LOGO.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/ProtelLib.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/R0805.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/SHMT.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/fuse_hua.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/HHZQC.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/HZQC-AMP.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/HZQC.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/TWS.Lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/con-phoenix-254.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/diode.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/relay.lbr"
-UsedLibrary="D:/WorkProject/SY_LBR/lb/resistor-power.lbr"
-UsedLibrary="P:/LBR_SY_Public/Connectors.lbr"
-UsedLibrary="P:/LBR_SY_Public/Diodes.lbr"
-UsedLibrary="P:/LBR_SY_Public/Inductors.lbr"
-UsedLibrary="P:/LBR_SY_Public/Relay.lbr"
-UsedLibrary="P:/LBR_SY_Public/Transistors.lbr"
 UsedLibrary="D:/EAGLE 8.3.2/cache/lbr/frames.lbr"
 UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/19inch.lbr"
 UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/40xx.lbr"
@@ -366,17 +348,22 @@ UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/xilinx-xc9.lbr"
 UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/xilinx-xcv.lbr"
 UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/zetex.lbr"
 UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/zilog.lbr"
-UsedLibrary="D:/WorkProject/snowmaker/prj_snowmaker.lbr"
 UsedLibrary="D:/EAGLE 8.2.2/cache/lbr/seeed/Seeed-OPL-Inductor.lbr"
-UsedLibrary="D:/WorkProject/EN001/EN001_prj.lbr"
+UsedLibrary="D:/WorkProjects/SHANGHAI/SHMT.lbr"
+UsedLibrary="SMR.lbr"
 
 [Win_1]
+Loc="-8 -8 1911 1008"
+State=1
+Number=4
+
+[Win_2]
 Type="Schematic Editor"
 Loc="0 0 1919 1017"
 State=1
 Number=1
 File="SMR.sch"
-View="118.833 106.485 208.008 163.812"
+View="497.478 98.7746 682.391 217.648"
 WireWidths=" 0.0762 0.1016 0.127 0.15 0.2 0.2032 0.254 0.3048 0.4064 0.508 0.6096 0.8128 1.016 1.27 2.54 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.65 0.7 0.75 0.8 0.85 0.9 1 0.6"
@@ -415,21 +402,68 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: 118.833 106.485 208.008 163.812"
+Views=" 1: 497.478 98.7746 682.391 217.648"
 Sheet="1"
 
-[Win_2]
+[Win_3]
+Type="Library Editor"
+Loc="-8 -8 1911 1008"
+State=1
+Number=5
+File="SMR.lbr"
+View="-426.914 -209.374 1030.9 301.311"
+WireWidths=" 0.2 0.254 0.3048 0.4064 0.508 0.6096 0.8128 1.016 1.27 2.54 0.0508 0.762 0.1524 0.001 0.2032 0.127"
+PadDiameters=" 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 3.81 6.4516 1.8 2.54 2.1844 0"
+PadDrills=" 0.35 0.4 0.45 0.5 0.55 0.65 0.7 0.75 0.85 0.9 1 0.6 3.2 0.9144 0.8 1.3"
+ViaDiameters=" 0.7 0.75 0.8 0.85 0.9 0.95 1 1.05 1.1 1.15 1.2 1.3 1.8 2.54 2.1844 0"
+ViaDrills=" 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.85 0.9 1 0.35 3.2 0.9144 0.8 1.3"
+HoleDrills=" 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.85 0.9 1 0.35 3.2 0.9144 0.8 1.3"
+TextSizes=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.4224 1.6764 1.9304 2.1844 3.81 5.08 6.4516 2.54 1.778 1.27"
+PolygonSpacings=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 5.08 6.4516 1.27"
+PolygonIsolates=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
+MiterRadiuss=" 0.254 0.3175 0.635 1.27 2.54 1 2 2.5 5 7.5 10 0"
+DimensionWidths=" 0 0.127 0.254 0.1 0.26 0.13"
+DimensionExtWidths=" 0.127 0.254 0.1 0.13 0.26 0"
+DimensionExtLengths=" 1.27 2.54 1 2 3 0"
+DimensionExtOffsets=" 1.27 2.54 1 2 3 0"
+SmdSizes=" 0.3048 0.1524 0.4064 0.2032 0.6096 0.3048 0.8128 0.4064 1.016 0.508 1.27 0.6604 1.4224 0.7112 1.6764 0.8128 1.778 0.9144 1.9304 0.9652 2.1844 1.0668 2.54 1.27 3.81 1.9304 5.08 2.54 6.4516 3.2512 1.27 0.635"
+WireBend=2
+WireBendSet=0
+WireCap=1
+MiterStyle=0
+PadShape=1
+ViaShape=1
+PolygonPour=0
+PolygonRank=0
+PolygonThermals=1
+PolygonOrphans=0
+TextRatio=10
+DimensionUnit=1
+DimensionPrecision=2
+DimensionShowUnit=0
+PinDirection=3
+PinFunction=0
+PinLength=2
+PinVisible=3
+SwapLevel=0
+ArcDirection=0
+AddLevel=2
+PadsSameType=0
+Layer=21
+Package="108.2-OUTLINE"
+
+[Win_4]
 Type="Board Editor"
 Loc="0 0 1919 1017"
 State=1
 Number=2
 File="SMR.brd"
-View="-95.0332 -30.7198 245.46 221.139"
-WireWidths=" 0.1016 0.127 0.15 0.2 0.2032 0.254 0.3048 0.508 0.6096 0.8128 1.016 1.27 0.1524 2.54 0.4064 2.032"
+View="10.31 22.12 65.3016 62.7966"
+WireWidths=" 0.1016 0.127 0.15 0.2 0.2032 0.254 0.3048 0.508 0.8128 1.016 0.1524 2.54 2.032 1.27 0.6096 0.4064"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.65 0.7 0.75 0.8 0.85 0.9 1 0.6"
 ViaDiameters=" 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1 1.05 1.1 1.15 1.2 1.3 0"
-ViaDrills=" 0.2 0.25 0.3 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1 0.35"
+ViaDrills=" 0.2 0.25 0.3 0.4 0.45 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1 0.35 0.5"
 HoleDrills=" 0.2 0.25 0.3 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1 0.35"
 TextSizes=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.9304 2.1844 2.54 3.81 5.08 6.4516 1.778"
 PolygonSpacings=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 5.08 6.4516 1.27"
@@ -464,9 +498,9 @@ AddLevel=2
 PadsSameType=0
 Layer=1
 
-[Win_3]
+[Win_5]
 Type="Control Panel"
-Loc="-8 -8 1911 1009"
+Loc="0 0 1919 1016"
 State=1
 Number=0
 
@@ -475,3 +509,5 @@ Screen="1920 1080"
 Window="Win_1"
 Window="Win_2"
 Window="Win_3"
+Window="Win_4"
+Window="Win_5"
