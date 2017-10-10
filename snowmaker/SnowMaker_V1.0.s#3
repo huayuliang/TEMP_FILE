@@ -1679,6 +1679,16 @@ MC - 405 / MC - 406 &lt;BR&gt;
 <text x="0" y="0" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <text x="0" y="0" size="1.016" layer="27" font="vector">&gt;VALUE</text>
 </package>
+<package name="RXEF110">
+<pad name="1" x="-2.9" y="0" drill="1"/>
+<pad name="2" x="2.9" y="0" drill="1"/>
+<wire x1="-6.4" y1="-1.5" x2="6.4" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="6.4" y1="-1.5" x2="6.4" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="6.4" y1="1.5" x2="-6.4" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="-6.4" y1="1.5" x2="-6.4" y2="-1.5" width="0.2032" layer="21"/>
+<text x="-6.35" y="3.81" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<text x="-6.35" y="-4.064" size="1.27" layer="27" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="STM32F103VCT6">
@@ -2488,6 +2498,22 @@ Source: http://www.semicon.toshiba.co.jp/td/en/Opto/Photocoupler/en_20050928_TLP
 </gates>
 <devices>
 <device name="" package="TRF250-120T">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RXEF110" prefix="F">
+<gates>
+<gate name="G$1" symbol="FUSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RXEF110">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -20818,6 +20844,9 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="HS1" library="prj_snowmaker" deviceset="HEATSINK" device=""/>
 <part name="F1" library="prj_snowmaker" deviceset="TRF250-120T" device=""/>
 <part name="F2" library="prj_snowmaker" deviceset="TRF250-120T" device=""/>
+<part name="F3" library="prj_snowmaker" deviceset="RXEF110" device=""/>
+<part name="F4" library="prj_snowmaker" deviceset="RXEF110" device=""/>
+<part name="F5" library="prj_snowmaker" deviceset="RXEF110" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20881,7 +20910,7 @@ https://item.taobao.com/item.htm?spm=a230r.1.14.133.76bf5232kHdgc&amp;id=5317673
 <text x="388.62" y="68.58" size="2.54" layer="94" ratio="10">因触摸屏上有实时时钟，这部分可能会取消</text>
 <text x="368.3" y="167.64" size="5.08" layer="94" ratio="10">RTC</text>
 <wire x1="190.5" y1="312.42" x2="190.5" y2="452.12" width="0.6096" layer="97" style="longdash"/>
-<text x="12.7" y="350.52" size="2.54" layer="94" ratio="10">6-24V DC/DC
+<text x="25.4" y="347.98" size="2.54" layer="94" ratio="10">6-24V DC/DC
 Power Supply</text>
 <text x="15.24" y="69.342" size="2.54" layer="94" ratio="10">参考：</text>
 </plain>
@@ -21187,8 +21216,8 @@ Power Supply</text>
 </instance>
 <instance part="GND54" gate="1" x="391.16" y="127"/>
 <instance part="GND3" gate="1" x="66.04" y="353.06" rot="MR0"/>
-<instance part="XT1" gate="-1" x="27.94" y="363.22"/>
-<instance part="XT1" gate="-2" x="27.94" y="368.3"/>
+<instance part="XT1" gate="-1" x="12.7" y="365.76"/>
+<instance part="XT1" gate="-2" x="12.7" y="373.38"/>
 <instance part="GND7" gate="1" x="93.98" y="353.06" rot="MR0"/>
 <instance part="GND9" gate="1" x="114.3" y="353.06" rot="MR0"/>
 <instance part="GND15" gate="1" x="137.16" y="353.06" rot="MR0"/>
@@ -21272,6 +21301,7 @@ Power Supply</text>
 <instance part="GND48" gate="1" x="350.52" y="220.98"/>
 <instance part="F1" gate="G$1" x="101.6" y="251.46"/>
 <instance part="F2" gate="G$1" x="101.6" y="246.38"/>
+<instance part="F3" gate="G$1" x="30.48" y="365.76"/>
 </instances>
 <busses>
 <bus name="ADCIN[0..11],DIN[1..20],DOUT[1..24]">
@@ -23361,13 +23391,6 @@ Power Supply</text>
 <label x="551.18" y="337.82" size="1.778" layer="95" ratio="10"/>
 </segment>
 </net>
-<net name="N$55" class="0">
-<segment>
-<pinref part="XT1" gate="-2" pin="1"/>
-<pinref part="X1" gate="G$1" pin="8"/>
-<wire x1="35.56" y1="368.3" x2="48.26" y2="368.3" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$59" class="0">
 <segment>
 <pinref part="XT2" gate="G$1" pin="1"/>
@@ -23384,11 +23407,33 @@ Power Supply</text>
 </net>
 <net name="N$61" class="0">
 <segment>
-<wire x1="38.1" y1="365.76" x2="38.1" y2="363.22" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="9"/>
 <wire x1="48.26" y1="365.76" x2="38.1" y2="365.76" width="0.1524" layer="91"/>
+<pinref part="F3" gate="G$1" pin="2"/>
+<pinref part="X1" gate="G$1" pin="8"/>
+<wire x1="38.1" y1="365.76" x2="35.56" y2="365.76" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="368.3" x2="38.1" y2="368.3" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="368.3" x2="38.1" y2="365.76" width="0.1524" layer="91"/>
+<junction x="38.1" y="365.76"/>
+</segment>
+</net>
+<net name="N$55" class="0">
+<segment>
 <pinref part="XT1" gate="-1" pin="1"/>
-<wire x1="35.56" y1="363.22" x2="38.1" y2="363.22" width="0.1524" layer="91"/>
+<pinref part="F3" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="365.76" x2="25.4" y2="365.76" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$62" class="0">
+<segment>
+<pinref part="X1" gate="G$1" pin="6"/>
+<wire x1="48.26" y1="373.38" x2="38.1" y2="373.38" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="373.38" x2="38.1" y2="370.84" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="7"/>
+<wire x1="38.1" y1="370.84" x2="48.26" y2="370.84" width="0.1524" layer="91"/>
+<pinref part="XT1" gate="-2" pin="1"/>
+<wire x1="20.32" y1="373.38" x2="38.1" y2="373.38" width="0.1524" layer="91"/>
+<junction x="38.1" y="373.38"/>
 </segment>
 </net>
 </nets>
@@ -27474,6 +27519,8 @@ https://item.taobao.com/item.htm?spm=a230r.1.14.62.76bf523uB9S1q</text>
 </instance>
 <instance part="AGND95" gate="VR1" x="548.64" y="152.4"/>
 <instance part="HS1" gate="G$1" x="289.56" y="45.72"/>
+<instance part="F4" gate="G$1" x="236.22" y="71.12"/>
+<instance part="F5" gate="G$1" x="58.42" y="66.04"/>
 </instances>
 <busses>
 <bus name="ADCIN[0..11]">
@@ -29233,10 +29280,10 @@ https://item.taobao.com/item.htm?spm=a230r.1.14.62.76bf523uB9S1q</text>
 </net>
 <net name="N$54" class="0">
 <segment>
-<pinref part="XT4" gate="-1" pin="1"/>
-<wire x1="226.06" y1="71.12" x2="246.38" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="DB2" gate="G$1" pin="A1"/>
+<wire x1="241.3" y1="71.12" x2="246.38" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="71.12" x2="246.38" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="F4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$56" class="0">
@@ -29249,10 +29296,10 @@ https://item.taobao.com/item.htm?spm=a230r.1.14.62.76bf523uB9S1q</text>
 </net>
 <net name="N$57" class="0">
 <segment>
-<pinref part="XT3" gate="-1" pin="1"/>
-<wire x1="50.8" y1="66.04" x2="66.04" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="DB1" gate="G$1" pin="A1"/>
+<wire x1="63.5" y1="66.04" x2="66.04" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="66.04" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="F5" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$58" class="0">
@@ -29320,6 +29367,20 @@ https://item.taobao.com/item.htm?spm=a230r.1.14.62.76bf523uB9S1q</text>
 <wire x1="358.14" y1="91.44" x2="411.48" y2="91.44" width="0.1524" layer="91"/>
 <label x="317.5" y="60.96" size="1.778" layer="95" ratio="10"/>
 <pinref part="C128" gate="G$1" pin="+"/>
+</segment>
+</net>
+<net name="N$63" class="0">
+<segment>
+<pinref part="F4" gate="G$1" pin="1"/>
+<pinref part="XT4" gate="-1" pin="1"/>
+<wire x1="226.06" y1="71.12" x2="231.14" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$64" class="0">
+<segment>
+<pinref part="F5" gate="G$1" pin="1"/>
+<pinref part="XT3" gate="-1" pin="1"/>
+<wire x1="50.8" y1="66.04" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
